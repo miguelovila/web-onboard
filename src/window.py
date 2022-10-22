@@ -32,10 +32,10 @@ class AboutDialog(Gtk.AboutDialog):
 
     def __init__(self, parent):
         Gtk.AboutDialog.__init__(self)
-        self.props.program_name = 'webnify'
+        self.props.program_name = 'Webnify'
         self.props.version = "0.1.0"
-        self.props.authors = ['miguelovila']
-        self.props.copyright = '2022 miguelovila'
+        self.props.authors = ['Miguel Vila']
+        self.props.copyright = '2022 Miguel Vila'
         self.props.logo_icon_name = 'com.miguelovila.webnify'
         self.props.modal = True
         self.set_transient_for(parent)
