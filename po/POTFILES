@@ -1,0 +1,7 @@
+data/com.miguelovila.webnify.desktop.in
+data/com.miguelovila.webnify.appdata.xml.in
+data/com.miguelovila.webnify.gschema.xml
+src/window.ui
+src/main.py
+src/window.py
+
