@@ -1,11 +1,11 @@
 {
-  "name": "webnify-app",
-  "productName": "webnify-app",
+  "name": "web-onboard",
+  "productName": "web-onboard",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "A simple and customizable utility to launch webapps.",
   "main": "src/index.js",
   "scripts": {
-    "start": "electron-forge start",
+    "start": "electron-forge start -- https://google.com",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
@@ -24,7 +24,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "webnify_app"
+            "name": "web_onboard"
           }
         },
         {
