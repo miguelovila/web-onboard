@@ -26,7 +26,7 @@ program
   .action((url, options) => {
     app.whenReady().then(() => {
 
-      options.userAgent = options.userAgent || "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36";
+      options.userAgent = options.userAgent || "Mozilla/5.0 (X11; Linux x86_64; rv:105.0) Gecko/20100101 Firefox/105.0";
       options.width = parseInt(options.width) || 1000;
       options.height = parseInt(options.height) || 600;
 
