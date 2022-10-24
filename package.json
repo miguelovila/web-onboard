@@ -1,20 +1,32 @@
 {
   "name": "web-onboard",
   "productName": "web-onboard",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A simple and customizable utility to launch webapps.",
-  "main": "src/index.js",
+  "main": ".webpack/main",
   "scripts": {
-    "start": "electron-forge start -- https://google.com",
+    "start": "electron-forge start",
+    "start-0": "electron-forge start -- open https://whatsmybrowser.org/ -t \"What's my Browser?\"",
+    "start-1": "electron-forge start -- open https://duckduckgo.com -t \"Better than Google\"",
+    "start-2": "electron-forge start -- open https://openstreetmap.org",
+    "start-3": "electron-forge start -- open https://github.com -w 200 -h 800",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "eslint --ext .ts,.tsx ."
   },
-  "keywords": [],
+  "keywords": [
+    "electron",
+    "webapp",
+    "launcher",
+    "integration",
+    "nativefier",
+    "web-onboard"
+  ],
   "author": {
-    "name": "miguelovila",
-    "email": "miguelovila@gmail.com"
+    "name": "Miguel Vila",
+    "email": "miguelovila@gmail.com",
+    "url": "https://miguelovila.com"
   },
   "license": "MIT",
   "config": {
@@ -58,11 +70,29 @@
             ]
           }
         }
+      ],
+      "plugins": [
+        [
+          "@electron-forge/plugin-webpack",
+          {
+            "mainConfig": "./webpack.main.config.js",
+            "renderer": {
+              "config": "./webpack.renderer.config.js",
+              "entryPoints": [
+                {
+                  "html": "./src/index.html",
+                  "js": "./src/renderer.ts",
+                  "name": "main_window",
+                  "preload": {
+                    "js": "./src/preload.ts"
+                  }
+                }
+              ]
+            }
+          }
+        ]
       ]
     }
-  },
-  "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.67",
@@ -71,6 +101,22 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.67",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.67",
     "@electron-forge/maker-zip": "^6.0.0-beta.67",
-    "electron": "21.2.0"
+    "@electron-forge/plugin-webpack": "^6.0.0-beta.67",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "@vercel/webpack-asset-relocator-loader": "^1.7.3",
+    "css-loader": "^6.7.1",
+    "electron": "21.2.0",
+    "eslint": "^8.26.0",
+    "eslint-plugin-import": "^2.26.0",
+    "fork-ts-checker-webpack-plugin": "^7.2.13",
+    "node-loader": "^2.0.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.1",
+    "typescript": "~4.5.4"
+  },
+  "dependencies": {
+    "commander": "^9.4.1",
+    "electron-squirrel-startup": "^1.0.0"
   }
 }
