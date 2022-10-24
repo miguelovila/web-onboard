@@ -7,13 +7,9 @@
 <br>
 
 [![GitHub issues](https://img.shields.io/github/issues/miguelovila/web-onboard)](https://github.com/miguelovila/web-onboard/issues)
-
 [![GitHub forks](https://img.shields.io/github/forks/miguelovila/web-onboard)](https://github.com/miguelovila/web-onboard/network)
-
 [![GitHub stars](https://img.shields.io/github/stars/miguelovila/web-onboard)](https://github.com/miguelovila/web-onboard/stargazers)
-
 [![GitHub license](https://img.shields.io/github/license/miguelovila/web-onboard)](https://github.com/miguelovila/web-onboard/blob/main/COPYING)
-
 [![Donate](https://img.shields.io/badge/PayPal-Donate-gray.svg?style=flat&logo=paypal&colorA=0071bb&logoColor=fff)](https://paypal.me/miguelviladev)
 
 ## Description
