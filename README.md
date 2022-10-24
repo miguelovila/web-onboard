@@ -16,10 +16,6 @@
 
 [![Donate](https://img.shields.io/badge/PayPal-Donate-gray.svg?style=flat&logo=paypal&colorA=0071bb&logoColor=fff)](https://paypal.me/miguelviladev)
 
-<p align="center">
-  <img src="brand/screenshot-1-dark.png"/>
-</p>
-
 ## Description
 Turn any webapp or webiste into a native-like system application that can be launched from a simple command. 
 
