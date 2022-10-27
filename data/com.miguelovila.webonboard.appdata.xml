@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>com.miguelovila.web-onboard</id>
+  <name>Web Onboard</name>
+  <summary>A Website and Webapp wrapper.</summary>
+
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-3.0</project_license>
+
+  <description>
+    <p>With Web Onboard, you can turn any webapp or webiste into a native-like system application that can be launched from a simple command.</p>
+  </description>
+
+  <url type="bugtracker">https://github.com/miguelovila/web-onboard/issues</url>
+  <url type="homepage">https://github.com/miguelovila/web-onboard</url>
+
+  <recommends>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </recommends>
+
+  <content_rating type="oars-1.1">
+    <content_attribute id="social-chat">intense</content_attribute>
+    <content_attribute id="social-info">intense</content_attribute>
+    <content_attribute id="social-audio">intense</content_attribute>
+    <content_attribute id="social-contacts">intense</content_attribute>
+  </content_rating>
+
+  <screenshots>
+    <screenshot type="default">
+      <image></image>
+    </screenshot>
+  </screenshots>
+
+  <releases>
+    <release version="0.1.0" date="2022-10-25">
+      <description>
+        <p>Initial release.</p>
+        <p>New features:</p>
+        <ul>
+          <li>Load custom url</li>
+          <li>Set custom window title</li>
+          <li>Set custom window dimensions</li>
+          <li>Set user agent</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+
+  <developer_name>Miguel Vila</developer_name>
+  <update_contact>miguelovila@gmail.com</update_contact>
+</component>
