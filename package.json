@@ -1,6 +1,6 @@
 {
-  "name": "web-onboard",
-  "productName": "web-onboard",
+  "name": "webonboard",
+  "productName": "webonboard",
   "version": "0.1.0",
   "description": "A simple and customizable utility to launch webapps.",
   "main": ".webpack/main",
@@ -11,6 +11,7 @@
     "start-2": "electron-forge start -- open https://openstreetmap.org",
     "start-3": "electron-forge start -- open https://github.com -w 200 -h 800",
     "start-4": "electron-forge start -- open https://dn.pt -t \"Diário de Notícias\"",
+    "start-5": "electron-forge start -- open https://www.google.com/maps -t \"Google Maps\" -i <path to png image>",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
@@ -22,41 +23,33 @@
     "launcher",
     "integration",
     "nativefier",
-    "web-onboard"
+    "webonboard"
   ],
   "author": {
     "name": "Miguel Vila",
     "email": "miguelovila@gmail.com",
     "url": "https://miguelovila.com"
   },
-  "license": "MIT",
+  "license": "GPL-3.0",
   "config": {
     "forge": {
       "packagerConfig": {},
       "makers": [
         {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "web_onboard"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        },
-        {
           "name": "@electron-forge/maker-flatpak",
           "config": {
+            "options": {
+              "icon": {
+                "512x512": "data/com.miguelovila.webonboard.png"
+              },
+              "categories": [
+                "Utility",
+                "WebBrowser",
+                "Network"
+              ],
+              "description": "A simple and customizable utility to launch webapps",
+              "productDescription": "With Web Onboard, you can turn any webapp or webiste into a native-like system application that can be launched from a simple command."
+            },
             "modules": [
               {
                 "name": "zypak",
@@ -97,10 +90,7 @@
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.67",
-    "@electron-forge/maker-deb": "^6.0.0-beta.67",
     "@electron-forge/maker-flatpak": "^6.0.0-beta.67",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.67",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.67",
     "@electron-forge/maker-zip": "^6.0.0-beta.67",
     "@electron-forge/plugin-webpack": "^6.0.0-beta.67",
     "@typescript-eslint/eslint-plugin": "^5.40.1",

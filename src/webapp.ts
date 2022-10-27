@@ -9,6 +9,7 @@ export default class webapp {
       title: options.title,
       width: options.width,
       height: options.height,
+      icon: options.icon,
       webPreferences: {
         nodeIntegration: true
       }
