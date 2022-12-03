@@ -12,6 +12,7 @@
     "start-3": "electron-forge start -- open https://github.com -w 200 -h 800",
     "start-4": "electron-forge start -- open https://dn.pt -t \"Diário de Notícias\"",
     "start-5": "electron-forge start -- open https://www.google.com/maps -t \"Google Maps\" -i <path to png image>",
+    "start-6": "electron-forge start -- open https://dn.pt -t \"Diário\" -i /home/miguelovila/Pictures/selfia.png -w 800 -h 600",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
@@ -67,6 +68,7 @@
       ],
       "plugins": [
         [
+
           "@electron-forge/plugin-webpack",
           {
             "mainConfig": "./webpack.main.config.js",

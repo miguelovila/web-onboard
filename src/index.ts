@@ -16,11 +16,12 @@ program
   .name(name)
   .description(description)
   .version(version);
+
 program
   .command("open")
   .description("Open a webapp in a new normal window")
   .argument("<url>", "The URL to open")
-  .option("-ua, --user-agent <userAgent>", "The user agent to use")
+  .option("-u, --user-agent <userAgent>", "The user agent to use")
   .option("-w, --width <width>", "The width of the window")
   .option("-h, --height <height>", "The height of the window")
   .option("-t, --title <title>", "The title of the window")
@@ -37,4 +38,4 @@ program
     });
   });
 
-program.parse(process.argv);
+program.parse();
